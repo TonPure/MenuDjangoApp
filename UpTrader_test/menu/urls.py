@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import re_path, include
 import menu.views as menu
 
 urlpatterns = [
-    url(r'^', menu.index, name='index'),
-    url(r'^(\d+)', menu.index, name='index')
+    re_path(r'^', menu.index, name='index'),
+    re_path(r'^(\d+)', menu.index, name='index')
 ]
